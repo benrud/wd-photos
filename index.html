@@ -7,9 +7,215 @@
     <meta name="description" content="Photo portfolio and gallery application" />
     <meta property="og:title" content="wd-photos" />
     <meta property="og:description" content="Photo portfolio and gallery application" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #0a0a0a;
+        color: #f5f5f5;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        text-align: center;
+        padding: 2.5rem 1.5rem 1.5rem;
+      }
+      header h1 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.35rem;
+      }
+      header p {
+        color: #a3a3a3;
+        font-size: 0.95rem;
+      }
+      main {
+        flex: 1;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem 3rem;
+      }
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .photo-card {
+        background-color: #171717;
+        border: 1px solid #262626;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .photo-card:hover {
+        transform: translateY(-2px);
+        border-color: #404040;
+      }
+      .image-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background-color: #262626;
+      }
+      .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+      .photo-card:hover .image-wrapper img {
+        transform: scale(1.03);
+      }
+      .photo-info {
+        padding: 0.85rem 1rem 1rem;
+      }
+      .photo-title {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #e5e5e5;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .photo-desc {
+        font-size: 0.8rem;
+        color: #737373;
+        margin-top: 0.25rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      @media (max-width: 640px) {
+        .photo-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.75rem;
+        }
+        .photo-info {
+          padding: 0.5rem 0.6rem 0.75rem;
+        }
+        .photo-title {
+          font-size: 0.8rem;
+        }
+        .photo-desc {
+          display: none;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-neutral-950 text-neutral-100 min-h-screen antialiased">
-    <div id="root"></div>
+  <body>
+    <div id="root">
+      <header id="gallery-header">
+        <h1 id="gallery-title">wd-photos</h1>
+        <p id="gallery-subtitle">Portfolio by Todd Benrud</p>
+      </header>
+
+      <main id="gallery-container">
+        <div id="photo-grid" class="photo-grid">
+          <!-- Row 1 -->
+          <article id="photo-card-1" class="photo-card">
+            <div id="image-wrapper-1" class="image-wrapper">
+              <img id="photo-img-1" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=600&fit=crop&auto=format&q=80" alt="Alpine Sunrise" loading="lazy" />
+            </div>
+            <div id="photo-info-1" class="photo-info">
+              <h2 id="photo-title-1" class="photo-title">Alpine Sunrise</h2>
+              <p id="photo-desc-1" class="photo-desc">Morning light across mountain peaks</p>
+            </div>
+          </article>
+
+          <article id="photo-card-2" class="photo-card">
+            <div id="image-wrapper-2" class="image-wrapper">
+              <img id="photo-img-2" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=600&fit=crop&auto=format&q=80" alt="Coastal Serenity" loading="lazy" />
+            </div>
+            <div id="photo-info-2" class="photo-info">
+              <h2 id="photo-title-2" class="photo-title">Coastal Serenity</h2>
+              <p id="photo-desc-2" class="photo-desc">Tides along the sandy shores</p>
+            </div>
+          </article>
+
+          <article id="photo-card-3" class="photo-card">
+            <div id="image-wrapper-3" class="image-wrapper">
+              <img id="photo-img-3" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=600&fit=crop&auto=format&q=80" alt="Whispering Woods" loading="lazy" />
+            </div>
+            <div id="photo-info-3" class="photo-info">
+              <h2 id="photo-title-3" class="photo-title">Whispering Woods</h2>
+              <p id="photo-desc-3" class="photo-desc">Sunlight piercing through deep forest</p>
+            </div>
+          </article>
+
+          <!-- Row 2 -->
+          <article id="photo-card-4" class="photo-card">
+            <div id="image-wrapper-4" class="image-wrapper">
+              <img id="photo-img-4" src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&h=600&fit=crop&auto=format&q=80" alt="Golden Horizon" loading="lazy" />
+            </div>
+            <div id="photo-info-4" class="photo-info">
+              <h2 id="photo-title-4" class="photo-title">Golden Horizon</h2>
+              <p id="photo-desc-4" class="photo-desc">Shadows dancing on desert dunes</p>
+            </div>
+          </article>
+
+          <article id="photo-card-5" class="photo-card">
+            <div id="image-wrapper-5" class="image-wrapper">
+              <img id="photo-img-5" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=600&fit=crop&auto=format&q=80" alt="Starlight Peak" loading="lazy" />
+            </div>
+            <div id="photo-info-5" class="photo-info">
+              <h2 id="photo-title-5" class="photo-title">Starlight Peak</h2>
+              <p id="photo-desc-5" class="photo-desc">Clear celestial skies above the summit</p>
+            </div>
+          </article>
+
+          <article id="photo-card-6" class="photo-card">
+            <div id="image-wrapper-6" class="image-wrapper">
+              <img id="photo-img-6" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=600&fit=crop&auto=format&q=80" alt="Metropolitan Angles" loading="lazy" />
+            </div>
+            <div id="photo-info-6" class="photo-info">
+              <h2 id="photo-title-6" class="photo-title">Metropolitan Angles</h2>
+              <p id="photo-desc-6" class="photo-desc">Reflective glass and geometric towers</p>
+            </div>
+          </article>
+
+          <!-- Row 3 -->
+          <article id="photo-card-7" class="photo-card">
+            <div id="image-wrapper-7" class="image-wrapper">
+              <img id="photo-img-7" src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=600&h=600&fit=crop&auto=format&q=80" alt="Cascade Falls" loading="lazy" />
+            </div>
+            <div id="photo-info-7" class="photo-info">
+              <h2 id="photo-title-7" class="photo-title">Cascade Falls</h2>
+              <p id="photo-desc-7" class="photo-desc">Crisp rushing water over mossy rocks</p>
+            </div>
+          </article>
+
+          <article id="photo-card-8" class="photo-card">
+            <div id="image-wrapper-8" class="image-wrapper">
+              <img id="photo-img-8" src="https://images.unsplash.com/photo-1439853941329-a99ce04511b7?w=600&h=600&fit=crop&auto=format&q=80" alt="Still Waters" loading="lazy" />
+            </div>
+            <div id="photo-info-8" class="photo-info">
+              <h2 id="photo-title-8" class="photo-title">Still Waters</h2>
+              <p id="photo-desc-8" class="photo-desc">Mirror reflections on a tranquil lake</p>
+            </div>
+          </article>
+
+          <article id="photo-card-9" class="photo-card">
+            <div id="image-wrapper-9" class="image-wrapper">
+              <img id="photo-img-9" src="https://images.unsplash.com/photo-1476820865390-c52aeebb9891?w=600&h=600&fit=crop&auto=format&q=80" alt="Autumn Canopy" loading="lazy" />
+            </div>
+            <div id="photo-info-9" class="photo-info">
+              <h2 id="photo-title-9" class="photo-title">Autumn Canopy</h2>
+              <p id="photo-desc-9" class="photo-desc">Vibrant amber foliage in the fall</p>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
