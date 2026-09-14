@@ -18,7 +18,7 @@ const PHOTOS: PhotoItem[] = [
     id: 'photo-card-2',
     title: 'Coastal Serenity',
     subtitle: 'Tides along the sandy shores',
-    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=600&fit=crop&auto=format&q=80',
+    url: '/images/nfl-football.jpg',
   },
   {
     id: 'photo-card-3',
