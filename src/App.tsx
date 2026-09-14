@@ -10,9 +10,9 @@ interface PhotoItem {
 const PHOTOS: PhotoItem[] = [
   {
     id: 'photo-card-1',
-    title: 'Alpine Sunrise',
-    subtitle: 'Morning light across mountain peaks',
-    url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=600&fit=crop&auto=format&q=80',
+    title: 'Jalen Hurts',
+    subtitle: 'Super Bowl LVII',
+    url: '/images/jalen-hurts.jpg',
   },
   {
     id: 'photo-card-2',
