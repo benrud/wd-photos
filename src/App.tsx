@@ -28,9 +28,9 @@ const PHOTOS: PhotoItem[] = [
   },
   {
     id: 'photo-card-4',
-    title: 'Golden Horizon',
-    subtitle: 'Shadows dancing on desert dunes',
-    url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&h=600&fit=crop&auto=format&q=80',
+    title: 'Phil Mickelson',
+    subtitle: '2021 PGA Championship',
+    url: '/images/phil-mickelson.jpg',
   },
   {
     id: 'photo-card-5',
