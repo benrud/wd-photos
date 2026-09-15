@@ -16,8 +16,8 @@ const PHOTOS: PhotoItem[] = [
   },
   {
     id: 'photo-card-2',
-    title: 'Coastal Serenity',
-    subtitle: 'Tides along the sandy shores',
+    title: 'NFL Football',
+    subtitle: 'Official Game Ball',
     url: '/images/nfl-football.jpg',
   },
   {
@@ -34,9 +34,9 @@ const PHOTOS: PhotoItem[] = [
   },
   {
     id: 'photo-card-5',
-    title: 'Starlight Peak',
-    subtitle: 'Clear celestial skies above the summit',
-    url: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=600&fit=crop&auto=format&q=80',
+    title: 'LeBron James',
+    subtitle: 'Cleveland Cavaliers 2018',
+    url: '/images/lebron-james.jpg',
   },
   {
     id: 'photo-card-6',
