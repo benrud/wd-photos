@@ -42,7 +42,7 @@ const PHOTOS: PhotoItem[] = [
     id: 'photo-card-6',
     title: 'Metropolitan Angles',
     subtitle: 'Reflective glass and geometric towers',
-    url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=600&fit=crop&auto=format&q=80',
+    url: '/images/nbc-row2-column3.jpg',
   },
   {
     id: 'photo-card-7',
